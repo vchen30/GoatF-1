@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # SQLite version 3.x
 #   gem install sqlite3
 #
@@ -28,4 +29,41 @@ test:
 
 production:
   <<: *default
+<<<<<<< HEAD
 database: db/production.sqlite3
+=======
+  database: db/production.sqlite3
+=======
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+#
+default: &default
+  adapter: postgresql
+  pool: 5
+  
+
+development:
+  <<: *default
+  database: d22mnjc69lc82r
+  username: uzqczloiptawvs
+  password: 2709b40a9efd7140a4ac14eb058089e7fe9ac952e7666c45d272b87ce6b3fa85
+  host: ec2-54-163-246-154.compute-1.amazonaws.com
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: d22mnjc69lc82r
+  username: uzqczloiptawvs
+  password: 2709b40a9efd7140a4ac14eb058089e7fe9ac952e7666c45d272b87ce6b3fa85
+  host: ec2-54-163-246-154.compute-1.amazonaws.com
+
+production:
+  <<: *default
+  database: db/production.sqlite3
+>>>>>>> 93343be017e00ac6d719b5c96f2e8415a54d8b96
+>>>>>>> be0da62a571de049f6e617f52a23398eb8b25707
