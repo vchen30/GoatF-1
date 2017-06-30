@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
   	validates_length_of :password, :in => 6..20, :on => :create
   	before_save :encrypt_password
 	  after_save :clear_password
-
+=begin
 	def encrypt_password
 	  if password.present?
 	    self.salt = BCrypt::Engine.generate_salt
@@ -33,7 +33,7 @@ class User < ActiveRecord::Base
 	def clear_password
 	  self.password = nil
 	end
-
+=end
   def User.digest(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
                                                   BCrypt::Engine.cost
